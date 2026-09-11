@@ -1,0 +1,143 @@
+/* ─── Reset & tokens ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0f1117;
+  --surface: #1a1d27;
+  --border:  #2a2d3a;
+  --accent:  #4f8ef7;
+  --text:    #e2e4ef;
+  --muted:   #6b7080;
+  --err:     #f87171;
+  --radius:  8px;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ─── Layout ────────────────────────────────────────────────── */
+body { min-height: 100vh; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 56px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.01em; }
+
+nav { display: flex; gap: 0.25rem; }
+
+main {
+  max-width: 860px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+section { display: flex; flex-direction: column; gap: 1.25rem; }
+
+/* ─── Typography ────────────────────────────────────────────── */
+h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.muted  { color: var(--muted); font-size: 0.9rem; }
+.err    { color: var(--err);   font-size: 0.9rem; }
+.mono   { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--muted); }
+
+/* ─── Buttons ───────────────────────────────────────────────── */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  transition: opacity 0.15s;
+}
+button:hover   { opacity: 0.85; }
+button:disabled{ opacity: 0.4; cursor: not-allowed; }
+
+/* nav tabs */
+nav button {
+  background: transparent;
+  color: var(--muted);
+  padding: 0.35rem 0.85rem;
+}
+nav button.active,
+nav button:hover  { color: var(--text); background: var(--border); }
+
+/* small refresh button next to heading */
+button.sm {
+  background: var(--border);
+  color: var(--muted);
+  font-size: 0.78rem;
+  padding: 0.2rem 0.6rem;
+}
+button.sm:hover { color: var(--text); }
+
+/* ─── Form ──────────────────────────────────────────────────── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+input {
+  flex: 1;
+  min-width: 140px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 0.88rem;
+  padding: 0.45rem 0.75rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+input:focus { border-color: var(--accent); }
+input::placeholder { color: var(--muted); }
+
+/* ─── Table ─────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+th { color: var(--muted); font-weight: 500; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+tr:last-child td { border-bottom: none; }
+tr:hover td      { background: rgba(255,255,255,0.02); }
