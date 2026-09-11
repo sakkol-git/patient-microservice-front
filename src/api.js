@@ -1,5 +1,5 @@
-const PATIENT_API = import.meta.env.VITE_PATIENT_API ?? 'http://localhost:8081';
-const AUDIT_API   = import.meta.env.VITE_AUDIT_API   ?? 'http://localhost:8082';
+const PATIENT_API = import.meta.env.VITE_PATIENT_API || '';
+const AUDIT_API   = import.meta.env.VITE_AUDIT_API   || '';
 
 const json = (res) => { if (!res.ok) throw new Error(res.statusText); return res.json(); };
 
