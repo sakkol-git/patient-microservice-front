@@ -2,19 +2,19 @@
   "rewrites": [
     {
       "source": "/patients",
-      "destination": "http://a8063dc3c9b654fd98b239ad5a38b583-93b581fdf50f6b28.elb.ap-southeast-1.amazonaws.com/patients"
+      "destination": "http://a3cf0bb06027647c198257622a06e9c5-6f9e75ac173b0169.elb.ap-southeast-1.amazonaws.com/patients"
     },
     {
       "source": "/patients/(.*)",
-      "destination": "http://a8063dc3c9b654fd98b239ad5a38b583-93b581fdf50f6b28.elb.ap-southeast-1.amazonaws.com/patients/$1"
+      "destination": "http://a3cf0bb06027647c198257622a06e9c5-6f9e75ac173b0169.elb.ap-southeast-1.amazonaws.com/patients/$1"
     },
     {
       "source": "/logs",
-      "destination": "http://a8063dc3c9b654fd98b239ad5a38b583-93b581fdf50f6b28.elb.ap-southeast-1.amazonaws.com/logs"
+      "destination": "http://a3cf0bb06027647c198257622a06e9c5-6f9e75ac173b0169.elb.ap-southeast-1.amazonaws.com/logs"
     },
     {
       "source": "/logs/(.*)",
-      "destination": "http://a8063dc3c9b654fd98b239ad5a38b583-93b581fdf50f6b28.elb.ap-southeast-1.amazonaws.com/logs/$1"
+      "destination": "http://a3cf0bb06027647c198257622a06e9c5-6f9e75ac173b0169.elb.ap-southeast-1.amazonaws.com/logs/$1"
     }
   ]
 }
